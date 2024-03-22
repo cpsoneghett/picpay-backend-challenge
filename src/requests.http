@@ -1,0 +1,12 @@
+GET http://localhost:8080/transaction
+
+###
+
+POST http://localhost:8080//transaction
+Content-Type: application/json
+
+{
+  "payer": 1,
+  "payee": 2,
+  "value": 1000
+}
