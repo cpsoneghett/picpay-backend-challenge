@@ -1,17 +1,8 @@
 package com.cpsoneghett.api.authorization;
 
-public class Authorization {
-    String message;
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
+public record Authorization(String message) {
 
     public boolean isAuthorized() {
-        return this.message.equals("Autorizado");
+        return this.message.equals("Authorized");
     }
 }

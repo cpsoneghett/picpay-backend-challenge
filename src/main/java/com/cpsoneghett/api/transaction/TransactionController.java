@@ -1,5 +1,7 @@
 package com.cpsoneghett.api.transaction;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,12 +17,14 @@ public class TransactionController {
     }
 
     @PostMapping
-    public Transaction createTransaction(@RequestBody Transaction transaction) {
-        return transactionService.create(transaction);
+    public ResponseEntity<TransactionDTO> createTransaction(@RequestBody TransactionDTO transactionRequest) {
+        TransactionDTO newTransaction = transactionService.create(transactionRequest);
+        return ResponseEntity.status(HttpStatus.CREATED).body(newTransaction);
     }
 
     @GetMapping
-    public List<Transaction> list() {
-        return transactionService.list();
+    public ResponseEntity<List<TransactionDTO>> list() {
+        List<TransactionDTO> response = transactionService.list();
+        return ResponseEntity.ok(response);
     }
 }

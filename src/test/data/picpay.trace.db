@@ -1,0 +1,333 @@
+2024-03-24 20:54:54.066270Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
+SELECT @@character_set_database, @@sql_mode [42001-224]
+2024-03-24 20:54:55.678439Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       drop 
+       foreign key FKadee6rnr73opdcvgsfg [42102-224]
+2024-03-24 20:54:55.688954Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       drop 
+       foreign key FK6e1hxco14d4sdryeqxm [42102-224]
+2024-03-24 20:54:55.698263Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value decimal(38,2),\000d\000a        CREATED_AT datetime(6),\000d\000a        id bigint not null auto_increment,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    ) engine=InnoDB"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value decimal(38,2),
+        CREATED_AT datetime(6),
+        id bigint not null auto_increment,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) engine=InnoDB [42001-224]
+2024-03-24 20:54:55.711802Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       add constraint FKadee6rnr73opdcvgsfgyk1qnu 
+       foreign key (payee) 
+       references WALLET [42102-224]
+2024-03-24 20:54:55.714323Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       add constraint FK6e1hxco14d4sdryeqxm4rmwyy 
+       foreign key (payer) 
+       references WALLET [42102-224]
+2024-03-24 20:54:58.509715Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS TRANSACTIONS ( ID BIGINT AUTO_INCREMENT PRIMARY KEY, PAYER BIGINT, PAYEE BIGINT, [*]VALUE DECIMAL(10, 2), CREATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (PAYER) REFERENCES WALLETS (ID), FOREIGN KEY (PAYEE) REFERENCES WALLETS (ID) ) ENGINE = InnoDB ROW_FORMAT = DYNAMIC"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS TRANSACTIONS ( ID BIGINT AUTO_INCREMENT PRIMARY KEY, PAYER BIGINT, PAYEE BIGINT, VALUE DECIMAL(10, 2), CREATED_AT DATETIME DEFAULT CURRENT_TIMESTAMP, FOREIGN KEY (PAYER) REFERENCES WALLETS (ID), FOREIGN KEY (PAYEE) REFERENCES WALLETS (ID) ) ENGINE = InnoDB ROW_FORMAT = DYNAMIC [42001-224]
+2024-03-24 20:56:49.970192Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT @[*]@character_set_database, @@sql_mode"; expected "identifier"; SQL statement:
+SELECT @@character_set_database, @@sql_mode [42001-224]
+2024-03-24 20:56:51.606158Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       drop 
+       foreign key FKadee6rnr73opdcvgsfgyk1qnu [42102-224]
+2024-03-24 20:56:51.614259Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       drop 
+       foreign key FK6e1hxco14d4sdryeqxm4rmwyy [42102-224]
+2024-03-24 20:56:51.624640Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value decimal(38,2),\000d\000a        CREATED_AT datetime(6),\000d\000a        id bigint not null auto_increment,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    ) engine=InnoDB"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value decimal(38,2),
+        CREATED_AT datetime(6),
+        id bigint not null auto_increment,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) engine=InnoDB [42001-224]
+2024-03-24 20:56:51.627820Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table WALLETS (\000d\000a        balance decimal(38,2),\000d\000a        id bigint not null auto_increment,\000d\000a        FULL_NAME varchar(255),\000d\000a        cpf varchar(255),\000d\000a        email varchar(255),\000d\000a        password varchar(255),\000d\000a        type enum ('CUSTOMER','STORE'),\000d\000a        primary key (id)\000d\000a    ) engine[*]=InnoDB"; expected "identifier"; SQL statement:
+
+    create table WALLETS (
+        balance decimal(38,2),
+        id bigint not null auto_increment,
+        FULL_NAME varchar(255),
+        cpf varchar(255),
+        email varchar(255),
+        password varchar(255),
+        type enum ('CUSTOMER','STORE'),
+        primary key (id)
+    ) engine=InnoDB [42001-224]
+2024-03-24 20:56:51.630822Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       add constraint FKadee6rnr73opdcvgsfgyk1qnu 
+       foreign key (payee) 
+       references WALLET [42102-224]
+2024-03-24 20:56:51.633333Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "TRANSACTIONS" not found; SQL statement:
+
+    alter table TRANSACTIONS 
+       add constraint FK6e1hxco14d4sdryeqxm4rmwyy 
+       foreign key (payer) 
+       references WALLET [42102-224]
+2024-03-24 20:56:54.696888Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS WALLETS ( ID BIGINT AUTO_INCREMENT PRIMARY KEY, FULL_NAME VARCHAR(100), CPF VARCHAR(11), EMAIL VARCHAR(100), PASSWORD VARCHAR(100), TYPE VARCHAR(50), BALANCE DECIMAL(10, 2) ) ENGINE [*]= InnoDB ROW_FORMAT = DYNAMIC"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS WALLETS ( ID BIGINT AUTO_INCREMENT PRIMARY KEY, FULL_NAME VARCHAR(100), CPF VARCHAR(11), EMAIL VARCHAR(100), PASSWORD VARCHAR(100), TYPE VARCHAR(50), BALANCE DECIMAL(10, 2) ) ENGINE = InnoDB ROW_FORMAT = DYNAMIC [42001-224]
+2024-03-24 20:58:21.525696Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 20:58:24.544349Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS WALLETS ( ID BIGINT AUTO_INCREMENT PRIMARY KEY, FULL_NAME VARCHAR(100), CPF VARCHAR(11), EMAIL VARCHAR(100), PASSWORD VARCHAR(100), TYPE VARCHAR(50), BALANCE DECIMAL(10, 2) ) ENGINE [*]= InnoDB ROW_FORMAT = DYNAMIC"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS WALLETS ( ID BIGINT AUTO_INCREMENT PRIMARY KEY, FULL_NAME VARCHAR(100), CPF VARCHAR(11), EMAIL VARCHAR(100), PASSWORD VARCHAR(100), TYPE VARCHAR(50), BALANCE DECIMAL(10, 2) ) ENGINE = InnoDB ROW_FORMAT = DYNAMIC [42001-224]
+2024-03-24 21:00:31.413456Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:00:40.263130Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:02:05.473525Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:02:15.556001Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:03:51.377377Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:04:00.388035Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:07:55.529351Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:08:04.589191Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:15:13.674635Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:15:20.476511Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:15:39.444841Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:15:39.455842Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:15:39.462848Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:15:39.469344Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:15:39.477336Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:15:39.483344Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:15:56.592208Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:15:56.598207Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:15:56.604208Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:15:56.610206Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:15:56.616244Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:15:56.621236Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:16:05.153652Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:16:05.159171Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:16:05.164832Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payer=?"; expected "identifier"; SQL statement:
+select tp1_0.payer,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payee,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payer=? [42001-224]
+2024-03-24 21:16:05.170830Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:16:05.176828Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:16:05.181828Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.[*]value from TRANSACTIONS tp1_0 where tp1_0.payee=?"; expected "identifier"; SQL statement:
+select tp1_0.payee,tp1_0.id,tp1_0.CREATED_AT,tp1_0.payer,tp1_0.value from TRANSACTIONS tp1_0 where tp1_0.payee=? [42001-224]
+2024-03-24 21:16:10.861514Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into TRANSACTIONS (CREATED_AT,payee,payer,[*]value,id) values (?,?,?,?,default)"; expected "identifier"; SQL statement:
+insert into TRANSACTIONS (CREATED_AT,payee,payer,value,id) values (?,?,?,?,default) [42001-224]
+2024-03-24 21:20:49.834666Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:20:53.544064Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS TRANSACTIONS ( ID SERIAL PRIMARY KEY, PAYER INT, PAYEE INT, [*]VALUE DECIMAL(10, 2), CREATED_AT TIMESTAMP, FOREIGN KEY (PAYER) REFERENCES WALLETS (ID), FOREIGN KEY (PAYEE) REFERENCES WALLETS (ID) )"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS TRANSACTIONS ( ID SERIAL PRIMARY KEY, PAYER INT, PAYEE INT, VALUE DECIMAL(10, 2), CREATED_AT TIMESTAMP, FOREIGN KEY (PAYER) REFERENCES WALLETS (ID), FOREIGN KEY (PAYEE) REFERENCES WALLETS (ID) ) [42001-224]
+2024-03-24 21:21:37.959343Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:21:40.963459Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS TRANSACTIONS ( ID SERIAL PRIMARY KEY, PAYER INT, PAYEE INT, [*]VALUE DECIMAL(10, 2), CREATED_AT TIMESTAMP, FOREIGN KEY (PAYER) REFERENCES WALLETS (ID), FOREIGN KEY (PAYEE) REFERENCES WALLETS (ID) )"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS TRANSACTIONS ( ID SERIAL PRIMARY KEY, PAYER INT, PAYEE INT, VALUE DECIMAL(10, 2), CREATED_AT TIMESTAMP, FOREIGN KEY (PAYER) REFERENCES WALLETS (ID), FOREIGN KEY (PAYEE) REFERENCES WALLETS (ID) ) [42001-224]
+2024-03-24 21:22:42.479448Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:22:51.633426Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "\000d\000a    create table TRANSACTIONS (\000d\000a        [*]value numeric(38,2),\000d\000a        CREATED_AT timestamp(6),\000d\000a        id bigint generated by default as identity,\000d\000a        payee bigint,\000d\000a        payer bigint,\000d\000a        primary key (id)\000d\000a    )"; expected "identifier"; SQL statement:
+
+    create table TRANSACTIONS (
+        value numeric(38,2),
+        CREATED_AT timestamp(6),
+        id bigint generated by default as identity,
+        payee bigint,
+        payer bigint,
+        primary key (id)
+    ) [42001-224]
+2024-03-24 21:23:03.877352Z jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into TRANSACTIONS (CREATED_AT,payee,payer,[*]value,id) values (?,?,?,?,default)"; expected "identifier"; SQL statement:
+insert into TRANSACTIONS (CREATED_AT,payee,payer,value,id) values (?,?,?,?,default) [42001-224]

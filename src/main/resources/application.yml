@@ -7,7 +7,7 @@ spring:
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    show-sql:true
+    show-sql: true
   sql:
     init:
       mode: always
@@ -25,5 +25,7 @@ spring:
           json:
             trusted:
               packages: '*'
+  flyway:
+    validate-on-migrate: false
 
 

@@ -1,4 +1,4 @@
-package com.cpsoneghett.api.transaction;
+package com.cpsoneghett.api.transaction.exception;
 
 public class InvalidTransactionException extends RuntimeException {
 

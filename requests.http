@@ -8,5 +8,5 @@ Content-Type: application/json
 {
   "payer": 1,
   "payee": 2,
-  "value": 1000
+  "value": 10
 }

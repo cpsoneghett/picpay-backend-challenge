@@ -1,14 +1,14 @@
-package com.cpsoneghett.api.transaction;
+package com.cpsoneghett.api.wallet;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class TransactionExceptionHandler {
+public class WalletExceptionHandler {
 
-    @ExceptionHandler(InvalidTransactionException.class)
-    public ResponseEntity<Object> handle(InvalidTransactionException ex) {
+    @ExceptionHandler(WalletNotFoundException.class)
+    public ResponseEntity<Object> handleWalletNotFoundException(WalletNotFoundException ex) {
         return ResponseEntity.badRequest().body(ex.getMessage());
     }
 }
